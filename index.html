@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>lensstory</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style> 
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: wheat; 
+            background-color: rgb(137, 145, 203);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background-color: #222;
+        }
+
+        .logo {
+            color: rgb(137, 145, 203);
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+   .nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    cursor: pointer;
+    }
+
+
+        .nav a:hover {
+            color: #00bfff;
+        }
+
+        .tab {
+            display: none;
+            padding: 20px 30px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Кнопки языка -->
+<button data-lang="az">AZ</button>
+<button data-lang="ru">RU</button>
+
+<header class="header">
+    <div class="logo">Lensstory</div>
+
+    <nav class="nav">
+        <a data-key="nav_home" onclick="showTab('home')"></a>
+        <a data-key="nav_contacts" onclick="showTab('contacts')"></a>
+        <a data-key="nav_about" onclick="showTab('about')"></a>
+    </nav>
+</header>
+<img src="photoapparat123948.png" class="fixed-image">
+
+
+<!-- Главная -->
+<div id="home" class="tab">
+    <h2 data-key="home_title"></h2>
+
+    <div class="cards-container">
+        <div class="card">
+            <img src="166103-krasnyj_cvet-volosy-voda-golova-guba-3840x2160.jpg" width="400" height="250">
+            <p data-key="photo_sample"></p>
+        </div>
+
+        <div class="card">
+            <img src="prod_5b9ddf67e726a.jpeg" width="800" height="300">
+            <p data-key="photo_vignette"></p>
+        </div>
+
+        <div class="card">
+            <img src="52b2a06a53fc8e98c3573d70be2b5a86.jpg" width="400" height="250">
+            <p data-key="photo_svadba"></p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Контакты -->
+<div id="contacts" class="tab">
+    <h2 data-key="contacts_title"></h2>
+    <p><strong>Instagram:</strong> @lensstory.az</p>
+    <p data-key="phone">+994 50 546 94 50</p>
+</div>
+
+<!-- О нас -->
+<div id="about" class="tab">
+    <h2 data-key="about_title"></h2>
+    <p data-key="about_text"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
